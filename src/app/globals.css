@@ -1,0 +1,426 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&family=Press+Start+2P&family=VT323&display=swap');
+@import "tailwindcss";
+
+/* ─── Palsam Arabic — Heading font ─── */
+@font-face {
+  font-family: 'PalsamArabic';
+  src: url('/fonts/PalsamArabic-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'PalsamArabic';
+  src: url('/fonts/PalsamArabic-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ─── IRANSansX — Body font ─── */
+@font-face {
+  font-family: 'IRANSansX';
+  src: url('/fonts/IRANSansX-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'IRANSansX';
+  src: url('/fonts/IRANSansX-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'IRANSansX';
+  src: url('/fonts/IRANSansX-DemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'IRANSansX';
+  src: url('/fonts/IRANSansX-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --background: #141312; /* Claude deep warm charcoal */
+  --foreground: #fbfaf7; /* Claude sand white */
+  --claude-bg: #141312;
+  --claude-text: #fbfaf7;
+  --claude-muted: #9e978e; /* Claude sandy gray */
+  --claude-sand: #2d2a26; /* Claude charcoal border */
+  --claude-sand-light: #1c1a18; /* Claude card base */
+  --claude-terracotta: #d97756; /* Claude warm clay/terracotta */
+  --claude-terracotta-dark: #b85e3c;
+  --accent-terracotta: #a855f7; /* violet highlights */
+
+  /* Custom font stacks — used for new FeatureShowcase section */
+  --font-heading: 'PalsamArabic', Tahoma, sans-serif;
+  --font-body: 'IRANSansX', Tahoma, sans-serif;
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-claude-bg: var(--claude-bg);
+  --color-claude-text: var(--claude-text);
+  --color-claude-muted: var(--claude-muted);
+  --color-claude-sand: var(--claude-sand);
+  --color-claude-sand-light: var(--claude-sand-light);
+  --color-claude-terracotta: var(--claude-terracotta);
+  --color-claude-terracotta-dark: var(--claude-terracotta-dark);
+  --color-accent-terracotta: var(--accent-terracotta);
+  
+  --font-sans: 'Vazirmatn', sans-serif;
+  --font-pixel: 'VT323', monospace;
+  --font-arcade: 'Press Start 2P', monospace;
+  --font-heading: 'PalsamArabic', Tahoma, sans-serif;
+  --font-body-ir: 'IRANSansX', Tahoma, sans-serif;
+}
+
+body {
+  background: #141312;
+  color: #fbfaf7;
+  font-family: 'Vazirmatn', sans-serif;
+  overflow-x: hidden;
+  direction: rtl;
+}
+
+/* Claude warm clay grid pattern */
+.bg-grid-pattern {
+  background-image: 
+    linear-gradient(to right, rgba(217, 119, 86, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(217, 119, 86, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: center top;
+}
+
+/* Liquid Glassmorphism style */
+.liquid-glass {
+  background: rgba(28, 26, 24, 0.45);
+  backdrop-filter: blur(24px) saturate(120%);
+  -webkit-backdrop-filter: blur(24px) saturate(120%);
+  border: 1px solid rgba(217, 119, 86, 0.18);
+  box-shadow: 
+    0 10px 30px -10px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.05);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.liquid-glass:hover {
+  background: rgba(28, 26, 24, 0.6);
+  border-color: rgba(217, 119, 86, 0.3);
+  box-shadow: 
+    0 15px 40px -10px rgba(217, 119, 86, 0.1),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.08);
+}
+
+/* Retro Pixel borders */
+.pixel-border {
+  border: 4px solid #141312;
+  box-shadow: 
+    0 0 0 2px #d97756,
+    0 4px 0 0 rgba(0, 0, 0, 0.2);
+  image-rendering: pixelated;
+}
+
+.pixel-card {
+  background: #1c1a18;
+  border: 3px solid #2d2a26;
+  box-shadow: 4px 4px 0 0 #d97756;
+  transition: all 0.2s steps(4);
+}
+
+.pixel-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 0 #a855f7;
+  border-color: #fbfaf7;
+}
+
+/* Font helpers */
+.font-pixel-title {
+  font-family: 'VT323', monospace;
+  font-size: 1.85rem;
+  letter-spacing: 0.05em;
+}
+
+.font-pixel-badge {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 8px;
+  line-height: 1;
+}
+
+/* Text gradients */
+.text-gradient {
+  background: linear-gradient(135deg, #fbfaf7 30%, #d97756 80%, #a855f7 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Scroll reveal helper */
+.reveal-element {
+  opacity: 0;
+  transform: translateY(24px);
+  filter: blur(5px);
+  transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-element.active {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+/* Floating animation */
+@keyframes float {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(0.5deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
+
+/* Hide scrollbar */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #141312;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2d2a26;
+  border: 2px solid #141312;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d97756;
+}
+
+/* Infinite marquee */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 25s linear infinite;
+}
+
+/* ─── Font utility classes ─── */
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.font-body-ir {
+  font-family: var(--font-body);
+}
+
+/* ─── Timeline Showcase ─── */
+.timeline-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(217, 119, 86, 0.15) 5%,
+    rgba(217, 119, 86, 0.3) 50%,
+    rgba(217, 119, 86, 0.15) 95%,
+    transparent 100%
+  );
+}
+
+.timeline-dot {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #1c1a18;
+  border: 2px solid rgba(217, 119, 86, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.timeline-dot.active {
+  border-color: #d97756;
+  box-shadow:
+    0 0 20px rgba(217, 119, 86, 0.25),
+    0 0 40px rgba(217, 119, 86, 0.08);
+}
+
+/* Shimmer skeleton for GIF loading */
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.skeleton-shimmer {
+  background: linear-gradient(
+    90deg,
+    #1c1a18 25%,
+    #2d2a26 50%,
+    #1c1a18 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s ease-in-out infinite;
+}
+
+/* Timeline card entrance animations */
+.reveal-from-right {
+  opacity: 0;
+  transform: translateX(-40px);
+  filter: blur(5px);
+  transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-from-left {
+  opacity: 0;
+  transform: translateX(40px);
+  filter: blur(5px);
+  transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-from-right.active,
+.reveal-from-left.active {
+  opacity: 1;
+  transform: translateX(0);
+  filter: blur(0);
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .reveal-element,
+  .reveal-from-left,
+  .reveal-from-right {
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+  }
+  
+  .animate-float,
+  .animate-marquee,
+  .skeleton-shimmer {
+    animation: none !important;
+  }
+  
+  .timeline-dot {
+    transition: none !important;
+  }
+}
+
+/* ─── 3D Cinema Icon Animations ─── */
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes spin-reverse {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+@keyframes float-3d {
+  0%, 100% {
+    transform: translateY(0px) rotateX(0deg) rotateY(0deg);
+  }
+  25% {
+    transform: translateY(-12px) rotateX(3deg) rotateY(-3deg);
+  }
+  50% {
+    transform: translateY(-6px) rotateX(-2deg) rotateY(3deg);
+  }
+  75% {
+    transform: translateY(-14px) rotateX(2deg) rotateY(-2deg);
+  }
+}
+
+@keyframes float-piece-1 {
+  0%, 100% { transform: translateY(0px) translateX(0px) rotate(0deg); }
+  33% { transform: translateY(-10px) translateX(5px) rotate(5deg); }
+  66% { transform: translateY(-5px) translateX(-3px) rotate(-3deg); }
+}
+
+@keyframes float-piece-2 {
+  0%, 100% { transform: translateY(0px) translateX(0px) rotate(0deg); }
+  33% { transform: translateY(-8px) translateX(-6px) rotate(-4deg); }
+  66% { transform: translateY(-14px) translateX(4px) rotate(3deg); }
+}
+
+@keyframes float-piece-3 {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-12px) rotate(8deg); }
+}
+
+@keyframes float-particle {
+  0%, 100% { transform: translateY(0px); opacity: 0.4; }
+  50% { transform: translateY(-15px); opacity: 0.8; }
+}
+
+/* ─── Credential Card Styles ─── */
+.credential-card {
+  background: rgba(28, 26, 24, 0.6);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(217, 119, 86, 0.15);
+  border-radius: 16px;
+  padding: 24px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.credential-card:hover {
+  border-color: rgba(217, 119, 86, 0.35);
+  box-shadow: 0 15px 40px -10px rgba(217, 119, 86, 0.08);
+}
+
+.credential-field {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #141312;
+  border: 1px solid #2d2a26;
+  border-radius: 8px;
+  padding: 8px 12px;
+  transition: border-color 0.2s;
+}
+
+.credential-field:hover {
+  border-color: rgba(217, 119, 86, 0.3);
+}
