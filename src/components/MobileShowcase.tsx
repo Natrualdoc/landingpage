@@ -118,7 +118,7 @@ export default function MobileShowcase() {
                 </div>
 
                 {/* Inner Screen */}
-                <div className="relative w-full h-full bg-zinc-955 overflow-hidden">
+                <div className="relative w-full h-full bg-zinc-950 overflow-hidden">
                   {shouldLoad ? (
                     <iframe
                       src={iframeSrc}
@@ -144,12 +144,6 @@ export default function MobileShowcase() {
               (نسخه زنده و تعاملی موبایل - می‌توانید داخل فریم اسکرول کنید)
             </span>
           </div>
-
-        </div>
-      </div>
-    </section>
-  );
-}
 
         </div>
       </div>
