@@ -7,7 +7,7 @@ import ScrollReveal from "./ScrollReveal";
 export default function MobileShowcase() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [shouldLoad, setShouldLoad] = useState(false);
-  const [videoError, setVideoError] = useState(false);
+  const [iframeSrc, setIframeSrc] = useState("http://localhost:3000");
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -29,6 +29,15 @@ export default function MobileShowcase() {
     return () => {
       if (currentRef) observer.unobserve(currentRef);
     };
+  }, []);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const hostname = window.location.hostname;
+      if (hostname !== "localhost" && hostname !== "127.0.0.1") {
+        setIframeSrc("/");
+      }
+    }
   }, []);
 
   const features = [
@@ -99,23 +108,23 @@ export default function MobileShowcase() {
           </div>
 
           {/* Premium CSS Phone Bezel Mockup */}
-          <div className="lg:col-span-5 order-1 lg:order-2 flex justify-center">
+          <div className="lg:col-span-5 order-1 lg:order-2 flex flex-col items-center justify-center">
             <ScrollReveal delay={300}>
-              <div className="relative mx-auto w-[310px] aspect-[498/696] bg-black rounded-[36px] border-[8px] border-zinc-800 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.8),0_0_40px_rgba(168,85,247,0.1)] overflow-hidden">
+              <div className="relative mx-auto w-[280px] h-[560px] bg-black rounded-[42px] border-[10px] border-zinc-800 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.8),0_0_40px_rgba(168,85,247,0.1)] overflow-hidden">
                 
                 {/* iPhone Dynamic Island */}
-                <div className="absolute top-2 left-1/2 -translate-x-1/2 w-16 h-3.5 bg-black rounded-full z-30 flex items-center justify-end px-2">
-                  <span className="w-1 h-1 rounded-full bg-zinc-900 border border-zinc-800" />
+                <div className="absolute top-2.5 left-1/2 -translate-x-1/2 w-20 h-4 bg-black rounded-full z-30 flex items-center justify-end px-2.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-zinc-900 border border-zinc-800" />
                 </div>
 
                 {/* Inner Screen */}
-                <div className="relative w-full h-full bg-zinc-950 overflow-hidden">
+                <div className="relative w-full h-full bg-zinc-955 overflow-hidden">
                   {shouldLoad ? (
-                    /* eslint-disable-next-line @next/next/no-img-element */
-                    <img
-                      src="/gifs/mobile-view.gif"
-                      alt="نمای موبایل مدیافای"
-                      className="w-full h-full object-cover"
+                    <iframe
+                      src={iframeSrc}
+                      title="Mediafy Mobile Demo"
+                      className="w-full h-full border-none bg-zinc-950"
+                      style={{ scrollbarWidth: "none" }}
                     />
                   ) : (
                     <div className="absolute inset-0 bg-zinc-900 flex items-center justify-center">
@@ -124,14 +133,23 @@ export default function MobileShowcase() {
                   )}
 
                   {/* Refraction Reflection Overlay */}
-                  <div className="absolute inset-0 pointer-events-none bg-gradient-to-tr from-transparent via-white/[0.03] to-white/[0.08] z-20" />
+                  <div className="absolute inset-0 pointer-events-none bg-gradient-to-tr from-transparent via-white/[0.01] to-white/[0.04] z-20" />
                 </div>
 
                 {/* Phone Speaker line */}
-                <div className="absolute top-1 left-1/2 -translate-x-1/2 w-10 h-0.5 bg-zinc-900 rounded-full z-30" />
+                <div className="absolute top-1 left-1/2 -translate-x-1/2 w-10 h-1 bg-zinc-900 rounded-full z-30" />
               </div>
             </ScrollReveal>
+            <span className="text-[10px] text-zinc-500 font-body-ir mt-4 text-center">
+              (نسخه زنده و تعاملی موبایل - می‌توانید داخل فریم اسکرول کنید)
+            </span>
           </div>
+
+        </div>
+      </div>
+    </section>
+  );
+}
 
         </div>
       </div>
