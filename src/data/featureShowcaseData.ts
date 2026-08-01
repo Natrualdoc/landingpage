@@ -47,7 +47,7 @@ export const showcaseFeatures: ShowcaseFeature[] = [
     title: "صفحه اصلی سایت",
     description:
       "نمایش کامل پرتال عمومی سایت شامل هیرو اسلایدر سینمایی، ردیف‌های فیلم و سریال با دسته‌بندی موضوعی، کارت‌های ویژه محتوا و طراحی تاریک حرفه‌ای VOD با پشتیبانی کامل RTL فارسی.",
-    mediaUrl: "/gifs/homepage.gif",
+    mediaUrl: "/gifs/homepage.mp4",
     icon: Monitor,
   },
   // ─── 2. نوار ناوبری ───
@@ -56,7 +56,7 @@ export const showcaseFeatures: ShowcaseFeature[] = [
     title: "نوار ناوبری و منوی اصلی",
     description:
       "منوی ناوبری واکنش‌گرا با ساختار سینمایی شامل لینک‌های جستجوی زنده، دسته‌بندی ژانر، فیلتر سال ساخت و دسترسی سریع به پنل کاربری و سبد خرید اشتراک.",
-    mediaUrl: "/gifs/navbar.gif",
+    mediaUrl: "/gifs/navbar.mp4",
     icon: Navigation,
   },
   // ─── 4. ورود و داشبورد کاربر ───
@@ -65,7 +65,7 @@ export const showcaseFeatures: ShowcaseFeature[] = [
     title: "ورود کاربر و داشبورد",
     description:
       "سیستم ورود پیامکی (OTP) و ایمیلی امن با داشبورد اختصاصی کاربر شامل وضعیت اشتراک فعال، تاریخچه تراکنش‌ها، لیست تماشا و تنظیمات حساب کاربری.",
-    mediaUrl: "/gifs/login-userdashboard.gif",
+    mediaUrl: "/gifs/login-userdashboard.mp4",
     icon: LogIn,
   },
   // ─── 5. پخش‌کننده ویدیو هوشمند ───
@@ -83,7 +83,7 @@ export const showcaseFeatures: ShowcaseFeature[] = [
     title: "نمای کلی پنل ادمین",
     description:
       "داشبورد جامع مدیریت سیستم با نمودارهای آماری درآمد روزانه، تعداد کاربران فعال، گزارش تراکنش‌های مالی و دسترسی سریع به تمامی ماژول‌های مدیریتی.",
-    mediaUrl: "/gifs/admin-panel.gif",
+    mediaUrl: "/gifs/admin-panel.mp4",
     icon: LayoutDashboard,
   },
   // ─── 7. آمارگیر هوشمند ───
@@ -101,7 +101,7 @@ export const showcaseFeatures: ShowcaseFeature[] = [
     title: "افزودن فیلم و جدول مدیریت",
     description:
       "ثبت خودکار اطلاعات فیلم از مرجع TMDB شامل پوستر، تریلر، خلاصه داستان و عوامل. جدول پیشرفته مدیریت محتوا با قابلیت جستجو، فیلتر و ویرایش دسته‌ای.",
-    mediaUrl: "/gifs/movie-add-table.gif",
+    mediaUrl: "/gifs/movie-add-table.mp4",
     icon: Film,
   },
   // ─── 7. خرید اشتراک ───
@@ -110,7 +110,7 @@ export const showcaseFeatures: ShowcaseFeature[] = [
     title: "خرید اشتراک VIP",
     description:
       "رابط خرید پلن‌های اشتراک طلایی، نقره‌ای و برنزی با قیمت‌گذاری شفاف، اعمال کد تخفیف آنی و انتقال به درگاه پرداخت بانکی جهت فعال‌سازی خودکار حساب.",
-    mediaUrl: "/gifs/buy-sub.gif",
+    mediaUrl: "/gifs/buy-sub.mp4",
     icon: Crown,
   },
   // ─── 8. درگاه پرداخت ───
@@ -119,7 +119,7 @@ export const showcaseFeatures: ShowcaseFeature[] = [
     title: "درگاه پرداخت آنلاین",
     description:
       "اتصال به درگاه پرداخت زرین‌پال با تأیید خودکار تراکنش، صدور فاکتور الکترونیکی، پشتیبانی از کیف پول داخلی و ثبت کامل تاریخچه پرداخت‌های کاربران.",
-    mediaUrl: "/gifs/payment-gateway.gif",
+    mediaUrl: "/gifs/payment-gateway.mp4",
     icon: Wallet,
   },
   // ─── 9. تنظیمات سیستم ───
@@ -128,7 +128,7 @@ export const showcaseFeatures: ShowcaseFeature[] = [
     title: "تنظیمات سیستم",
     description:
       "پیکربندی جامع سیستم شامل تنظیمات هویت سایت (لوگو، نام برند)، کلیدهای API، درگاه پیامک، تنظیمات سئو، کش سرور Redis و پارامترهای امنیتی پلیر.",
-    mediaUrl: "/gifs/setting.gif",
+    mediaUrl: "/gifs/setting.mp4",
     icon: Settings,
   },
   // ─── 10. مدیریت پلن‌های اشتراک ───
@@ -137,7 +137,7 @@ export const showcaseFeatures: ShowcaseFeature[] = [
     title: "مدیریت پلن‌های اشتراک",
     description:
       "تعریف و ویرایش تعرفه‌های اشتراک VIP با تنظیم مدت اعتبار، قیمت‌گذاری، سطح دسترسی محتوا و فعال‌سازی یا غیرفعال‌سازی هر پلن از پنل مدیریت.",
-    mediaUrl: "/gifs/subscription.gif",
+    mediaUrl: "/gifs/subscription.mp4",
     icon: CreditCard,
   },
   // ─── 11. سیستم کد تخفیف ───
@@ -146,7 +146,7 @@ export const showcaseFeatures: ShowcaseFeature[] = [
     title: "سیستم کد تخفیف",
     description:
       "ایجاد کدهای تخفیف درصدی و مبلغی با محدودیت زمانی، تعداد مصرف، اختصاص به پلن خاص و گزارش‌گیری از میزان استفاده هر کد توسط کاربران.",
-    mediaUrl: "/gifs/discount-code.gif",
+    mediaUrl: "/gifs/discount-code.mp4",
     icon: Ticket,
   },
   // ─── 12. مدیریت ژانرها ───
@@ -155,7 +155,7 @@ export const showcaseFeatures: ShowcaseFeature[] = [
     title: "مدیریت ژانرها",
     description:
       "افزودن، ویرایش و حذف ژانرهای سینمایی با قابلیت تخصیص چندگانه به فیلم‌ها و سریال‌ها. نمایش گرید مرتب با جستجوی سریع و اسلاگ فارسی.",
-    mediaUrl: "/gifs/genre.gif",
+    mediaUrl: "/gifs/genre.mp4",
     icon: Music,
   },
   // ─── 13. مدیریت کشورها ───
@@ -164,7 +164,7 @@ export const showcaseFeatures: ShowcaseFeature[] = [
     title: "مدیریت کشورها",
     description:
       "ثبت کشورهای تولیدکننده محتوا با پرچم و کد بین‌المللی. امکان فیلتر فیلم‌ها بر اساس کشور سازنده در بخش عمومی سایت.",
-    mediaUrl: "/gifs/country.gif",
+    mediaUrl: "/gifs/country.mp4",
     icon: Globe,
   },
   // ─── 14. مدیریت دسته‌بندی‌ها ───
@@ -173,7 +173,7 @@ export const showcaseFeatures: ShowcaseFeature[] = [
     title: "مدیریت دسته‌بندی‌ها",
     description:
       "ساختار درختی دسته‌بندی‌های محتوایی با قابلیت تعریف زیرمجموعه، تصویر شاخص اختصاصی و نمایش اتوماتیک در منوی ناوبری و فیلترهای جستجو.",
-    mediaUrl: "/gifs/category.gif",
+    mediaUrl: "/gifs/category.mp4",
     icon: FolderTree,
   },
   // ─── 15. مدیریت بازیگران ───
@@ -182,7 +182,7 @@ export const showcaseFeatures: ShowcaseFeature[] = [
     title: "مدیریت بازیگران",
     description:
       "ثبت پروفایل بازیگران و عوامل فیلم از TMDB با بیوگرافی فارسی، تصویر رسمی و فیلموگرافی. نمایش آرشیو بازیگران به صورت گرید دایره‌ای در سایت عمومی.",
-    mediaUrl: "/gifs/actors.gif",
+    mediaUrl: "/gifs/actors.mp4",
     icon: Users,
   },
   // ─── 16. سیستم اعلان‌ها ───
@@ -191,7 +191,7 @@ export const showcaseFeatures: ShowcaseFeature[] = [
     title: "سیستم اعلان‌ها",
     description:
       "ارسال نوتیفیکیشن‌های سیستمی به کاربران شامل اطلاع‌رسانی محتوای جدید، یادآوری تمدید اشتراک، اعلام تخفیف‌های ویژه و پیام‌های مدیریتی.",
-    mediaUrl: "/gifs/notification.gif",
+    mediaUrl: "/gifs/notification.mp4",
     icon: Bell,
   },
   // ─── 17. تنظیمات حساب کاربری ───
@@ -200,7 +200,7 @@ export const showcaseFeatures: ShowcaseFeature[] = [
     title: "تنظیمات حساب کاربری",
     description:
       "ویرایش اطلاعات پروفایل کاربر شامل تغییر آواتار، نام نمایشی، شماره موبایل، رمز عبور و مشاهده وضعیت اشتراک فعال با تاریخ انقضا.",
-    mediaUrl: "/gifs/user-setting.gif",
+    mediaUrl: "/gifs/user-setting.mp4",
     icon: UserCog,
   },
   // ─── 18. پیکربندی صفحات ───
@@ -209,7 +209,7 @@ export const showcaseFeatures: ShowcaseFeature[] = [
     title: "پیکربندی صفحات",
     description:
       "مدیریت صفحات ایستای سایت مانند درباره ما، قوانین و مقررات، تماس با ما و سؤالات متداول با ویرایشگر متنی و تنظیمات سئوی اختصاصی هر صفحه.",
-    mediaUrl: "/gifs/pages-config.gif",
+    mediaUrl: "/gifs/pages-config.mp4",
     icon: FileText,
   },
 ];
