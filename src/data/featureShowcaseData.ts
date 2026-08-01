@@ -17,6 +17,8 @@ import {
   Bell,
   UserCog,
   FileText,
+  BarChart3,
+  Tv,
 } from "lucide-react";
 import type { ComponentType } from "react";
 
@@ -34,6 +36,7 @@ export interface ShowcaseFeature {
   title: string;
   description: string;
   mediaUrl: string;
+  mediaType?: "gif" | "video";
   icon: ComponentType<{ className?: string }>;
 }
 
@@ -56,15 +59,6 @@ export const showcaseFeatures: ShowcaseFeature[] = [
     mediaUrl: "/gifs/navbar.gif",
     icon: Navigation,
   },
-  // ─── 3. نمای موبایل ───
-  {
-    id: "mobile-view",
-    title: "نمای موبایل ریسپانسیو",
-    description:
-      "طراحی کاملاً واکنش‌گرا و بهینه‌شده برای موبایل و تبلت. تمامی بخش‌های سایت از هیرو تا پلیر و پنل‌های مدیریتی در ابعاد مختلف صفحه‌نمایش به‌درستی نمایش داده می‌شوند.",
-    mediaUrl: "/gifs/mobile-view.gif",
-    icon: Smartphone,
-  },
   // ─── 4. ورود و داشبورد کاربر ───
   {
     id: "login-userdashboard",
@@ -74,7 +68,16 @@ export const showcaseFeatures: ShowcaseFeature[] = [
     mediaUrl: "/gifs/login-userdashboard.gif",
     icon: LogIn,
   },
-  // ─── 5. نمای پنل ادمین ───
+  // ─── 5. پخش‌کننده ویدیو هوشمند ───
+  {
+    id: "custom-player",
+    title: "پخش‌کننده ویدیو و کنترل ژست حرکتی",
+    description:
+      "پلیر اختصاصی و بومی توسعه‌یافته با پشتیبانی از استریم HLS و MP4، سیستم رزومه پخش خودکار، تغییر نرم کیفیت و سرعت، و کنترل صدای عمودی و روشنایی صفحه با ژست‌های لمسی و موس.",
+    mediaUrl: "/gifs/test-player.mp4",
+    icon: Tv,
+  },
+  // ─── 6. نمای پنل ادمین ───
   {
     id: "admin-panel",
     title: "نمای کلی پنل ادمین",
@@ -83,7 +86,16 @@ export const showcaseFeatures: ShowcaseFeature[] = [
     mediaUrl: "/gifs/admin-panel.gif",
     icon: LayoutDashboard,
   },
-  // ─── 6. افزودن فیلم و جدول ───
+  // ─── 7. آمارگیر هوشمند ───
+  {
+    id: "analytics",
+    title: "آمار و تحلیل پیشرفته بازدیدکنندگان",
+    description:
+      "سیستم پیشرفته آمارگیری زنده برای بررسی تعداد کاربران فعال، کشورهای بازدیدکننده، صفحات پربازدید، ارجاع‌دهنده‌ها و دستگاه‌های مورد استفاده به همراه نمودارهای گرافیکی تعاملی.",
+    mediaUrl: "/gifs/view.mp4",
+    icon: BarChart3,
+  },
+  // ─── 8. افزودن فیلم و جدول ───
   {
     id: "movie-add-table",
     title: "افزودن فیلم و جدول مدیریت",

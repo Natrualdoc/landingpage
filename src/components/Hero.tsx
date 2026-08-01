@@ -118,7 +118,7 @@ export default function Hero() {
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-md border border-[#d97756]/30 bg-[#d97756]/5 text-[#d97756] mb-6 shadow-[0_0_15px_rgba(217,119,86,0.08)]">
             <Sparkles className="w-3.5 h-3.5 animate-pulse" />
             <span className="font-arcade text-[8px] tracking-wider uppercase pt-0.5">
-              ANTIGRAVITY SYSTEM / MEDIAFY DIRECTORY
+              PREMIUM VOD PLATFORM / MEDIAFY DIRECTORY
             </span>
           </div>
         </ScrollReveal>

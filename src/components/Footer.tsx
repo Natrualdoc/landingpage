@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Github, Mail, Heart, Film } from "lucide-react";
+import { Heart, Smartphone, Monitor } from "lucide-react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -15,9 +15,12 @@ export default function Footer() {
           
           {/* Brand Info */}
           <div className="md:col-span-5 space-y-4">
-            <a href="#" className="flex items-center gap-2 group">
+            <a href="#" className="flex items-center gap-2.5 group">
               <div className="w-8 h-8 rounded-lg bg-[#d97756]/10 border border-[#d97756]/20 flex items-center justify-center text-[#d97756]">
-                <Film className="w-4 h-4" />
+                <svg viewBox="0 0 40 40" fill="none" className="w-4 h-4">
+                  <path d="M12 10L20 16L28 10V30L20 24L12 30V10Z" fill="#d97756" fillOpacity="0.9"/>
+                  <path d="M20 16L28 10V30L20 24V16Z" fill="#d97756" fillOpacity="0.6"/>
+                </svg>
               </div>
               <span className="font-pixel text-[1.45rem] font-bold tracking-wider text-white">
                 MEDIAFY
@@ -59,24 +62,31 @@ export default function Footer() {
             <span>برای جامعه توسعه‌دهندگان وب فارسی.</span>
           </div>
 
-          {/* Socials */}
-          <div className="flex items-center gap-4">
-            <a
-              href="https://github.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-7 h-7 rounded border border-[#2d2a26] flex items-center justify-center text-[#9e978e] hover:border-[#d97756] hover:text-[#d97756] cursor-pointer transition-colors duration-200"
-              aria-label="GitHub Repository"
-            >
-              <Github className="w-3.5 h-3.5" />
-            </a>
-            <a
-              href="mailto:support@mediafy.ir"
-              className="w-7 h-7 rounded border border-[#2d2a26] flex items-center justify-center text-[#9e978e] hover:border-[#d97756] hover:text-[#d97756] cursor-pointer transition-colors duration-200"
-              aria-label="Email Support"
-            >
-              <Mail className="w-3.5 h-3.5" />
-            </a>
+          {/* Coming Soon Download Cards */}
+          <div className="flex flex-wrap items-center gap-3">
+            {/* Android Card */}
+            <div className="flex items-center gap-3 px-3.5 py-2 rounded-xl bg-[#1c1a18] border border-[#2d2a26] opacity-60 cursor-not-allowed select-none group relative">
+              <div className="w-8 h-8 rounded-lg bg-[#d97756]/10 border border-[#d97756]/20 flex items-center justify-center text-[#d97756] flex-shrink-0">
+                <Smartphone className="w-4 h-4" />
+              </div>
+              <div className="text-right">
+                <p className="text-[10px] font-bold text-white leading-tight">اپلیکیشن اندروید</p>
+                <p className="text-[8px] text-[#9e978e] mt-0.5">دریافت نسخه APK</p>
+              </div>
+              <span className="absolute -top-2 -left-2 px-1.5 py-0.5 bg-[#d97756] text-[8px] font-bold rounded text-white scale-75 origin-top-left">به‌زودی</span>
+            </div>
+
+            {/* Windows Card */}
+            <div className="flex items-center gap-3 px-3.5 py-2 rounded-xl bg-[#1c1a18] border border-[#2d2a26] opacity-60 cursor-not-allowed select-none group relative">
+              <div className="w-8 h-8 rounded-lg bg-[#d97756]/10 border border-[#d97756]/20 flex items-center justify-center text-[#d97756] flex-shrink-0">
+                <Monitor className="w-4 h-4" />
+              </div>
+              <div className="text-right">
+                <p className="text-[10px] font-bold text-white leading-tight">نسخه دسکتاپ (ویندوز)</p>
+                <p className="text-[8px] text-[#9e978e] mt-0.5">دریافت نسخه Setup</p>
+              </div>
+              <span className="absolute -top-2 -left-2 px-1.5 py-0.5 bg-[#d97756] text-[8px] font-bold rounded text-white scale-75 origin-top-left">به‌زودی</span>
+            </div>
           </div>
 
         </div>

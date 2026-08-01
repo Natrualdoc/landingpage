@@ -14,6 +14,7 @@ function GifCard({ feature, index }: { feature: ShowcaseFeature; index: number }
   const cardRef = useRef<HTMLDivElement>(null);
   const [shouldLoad, setShouldLoad] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [videoError, setVideoError] = useState(false);
 
   // Lazy-load: only set src when card is near viewport
   useEffect(() => {
@@ -56,7 +57,7 @@ function GifCard({ feature, index }: { feature: ShowcaseFeature; index: number }
       </div>
 
       {/* GIF content area with skeleton */}
-      <div className="relative w-full aspect-[16/10] overflow-hidden bg-zinc-900">
+      <div className="relative w-full aspect-[1920/914] overflow-hidden bg-zinc-950">
         {/* Skeleton shimmer shown until GIF loads */}
         {!isLoaded && (
           <div className="absolute inset-0 skeleton-shimmer flex items-center justify-center">
@@ -68,17 +69,32 @@ function GifCard({ feature, index }: { feature: ShowcaseFeature; index: number }
         )}
 
         {shouldLoad && (
-          /* eslint-disable-next-line @next/next/no-img-element */
-          <img
-            src={feature.mediaUrl}
-            alt={feature.title}
-            loading="lazy"
-            decoding="async"
-            onLoad={() => setIsLoaded(true)}
-            className={`w-full h-full object-cover object-top transition-opacity duration-500 ${
-              isLoaded ? "opacity-100" : "opacity-0"
-            }`}
-          />
+          feature.mediaUrl.endsWith(".mp4") || feature.mediaUrl.endsWith(".webm") ? (
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="auto"
+              onCanPlay={() => setIsLoaded(true)}
+              onError={() => setVideoError(true)}
+              className={`w-full h-full object-cover transition-opacity duration-500 ${
+                isLoaded ? "opacity-100" : "opacity-0"
+              }`}
+            >
+              <source src={feature.mediaUrl} type={feature.mediaUrl.endsWith(".webm") ? "video/webm" : "video/mp4"} />
+            </video>
+          ) : (
+            /* eslint-disable-next-line @next/next/no-img-element */
+            <img
+              src={feature.mediaUrl}
+              alt={feature.title}
+              onLoad={() => setIsLoaded(true)}
+              className={`w-full h-full object-cover transition-opacity duration-500 ${
+                isLoaded ? "opacity-100" : "opacity-0"
+              }`}
+            />
+          )
         )}
       </div>
 

@@ -22,13 +22,13 @@ export default function Header() {
         {/* Right: Pixel Logo */}
         <a href="#" className="flex items-center gap-2.5 group cursor-pointer">
           <div className="w-7 h-7 rounded-md bg-[#d97756]/10 border border-[#d97756]/20 flex items-center justify-center text-[#d97756] transition-all duration-300 group-hover:scale-105 shadow-[0_0_10px_rgba(217,119,86,0.1)]">
-            <Film className="w-3.5 h-3.5" />
+            <svg viewBox="0 0 40 40" fill="none" className="w-4 h-4">
+              <path d="M12 10L20 16L28 10V30L20 24L12 30V10Z" fill="#d97756" fillOpacity="0.9"/>
+              <path d="M20 16L28 10V30L20 24V16Z" fill="#d97756" fillOpacity="0.6"/>
+            </svg>
           </div>
           <span className="font-pixel text-[1.65rem] font-bold tracking-wider text-[#fbfaf7] flex items-center gap-1.5 leading-none pt-0.5">
             MEDIAFY
-            <span className="font-arcade text-[7px] text-[#d97756] bg-zinc-950/60 border border-zinc-800 px-1 py-0.5 rounded flex items-center justify-center tracking-normal font-normal">
-              V1.9
-            </span>
           </span>
         </a>
 

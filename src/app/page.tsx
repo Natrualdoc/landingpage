@@ -6,6 +6,7 @@ import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Features from "../components/Features";
 import FeatureShowcase from "../components/FeatureShowcase";
+import MobileShowcase from "../components/MobileShowcase";
 import Footer from "../components/Footer";
 import ScrollReveal from "../components/ScrollReveal";
 import { Server, Zap, Globe, Cpu, Terminal, Sparkles } from "lucide-react";
@@ -66,8 +67,8 @@ export default function Home() {
       name: "Next.js 16",
       desc: "رندرینگ سرور ساید و بهینه‌سازی بارگذاری صفحات",
       svg: (
-        <svg viewBox="0 0 180 180" className="w-5 h-5 fill-white">
-          <path d="M149 135L82 48H68v84h10V62l61 80c4-2 7-5 10-7zM90 140c27 0 50-18 57-43l-67-89H68v132h10v-30h12z" />
+        <svg viewBox="0 0 24 24" className="w-5 h-5 fill-white">
+          <path d="M18.66 20.25l-9.54-12.43v11.89H6.84V3.75h2.28l9.54 12.43V3.75h2.28v16.5h-2.28z M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" />
         </svg>
       ),
     },
@@ -75,7 +76,7 @@ export default function Home() {
       name: "React 19",
       desc: "مدیریت استیت‌ها و کامپوننت‌های تعاملی VOD",
       svg: (
-        <svg viewBox="-11.5 -10.23174 23 20.46348" className="w-5 h-5 fill-none stroke-[#61dafb]" strokeWidth="1.8">
+        <svg viewBox="-11.5 -10.23 23 20.46" className="w-5 h-5 fill-none stroke-[#61dafb]" strokeWidth="1.8">
           <circle cx="0" cy="0" r="2.05" fill="#61dafb" />
           <g>
             <ellipse rx="11" ry="4.2" />
@@ -90,7 +91,7 @@ export default function Home() {
       desc: "استایل‌دهی شیشه‌ای مایع و طراحی کاملاً ریسپانسیو",
       svg: (
         <svg viewBox="0 0 24 24" className="w-5 h-5 fill-[#38bdf8]">
-          <path d="M12 6.036c-2.4 0-4.224.81-5.472 2.43-1.248 1.62-1.344 3.402-.288 5.346 1.056 1.944 2.832 2.754 5.328 2.43 1.968-.255 3.384-.969 4.248-2.145 1.104-1.5 1.056-3.255-.144-5.265-1.2-2.01-2.472-2.796-3.672-2.796zm0-5.4c-2.4 0-4.224.81-5.472 2.43-1.248 1.62-1.344 3.402-.288 5.346 1.056 1.944 2.832 2.754 5.328 2.43 1.968-.255 3.384-.969 4.248-2.145 1.104-1.5 1.056-3.255-.144-5.265-1.2-2.01-2.472-2.796-3.672-2.796z" />
+          <path d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8 1 .25 1.7 1 2.5 1.8C14 10.9 15.3 12.2 17.6 12.2c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.9-.22-1.5-.9-2.3-1.7-.8-.8-2.1-2.1-5.1-2.1zM6.001 12c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8 1 .25 1.7 1 2.5 1.8.8.8 2.1 2.1 4.4 2.1 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.9-.22-1.5-.9-2.3-1.7-.8-.8-2.1-2.1-5.1-2.1z" />
         </svg>
       ),
     },
@@ -99,7 +100,8 @@ export default function Home() {
       desc: "پایگاه‌داده رابطه‌ای ذخیره‌سازی فیلم‌ها، کاربران و تراکنش‌ها",
       svg: (
         <svg viewBox="0 0 24 24" className="w-5 h-5 fill-[#00758f]">
-          <path d="M12 2C6.48 2 2 4.02 2 6.5s4.48 4.5 10 4.5 10-2.02 10-4.5S17.52 2 12 2zm0 6.5c-4.41 0-8-1.12-8-2.5s3.59-2.5 8-2.5 8 1.12 8 2.5-3.59 2.5-8 2.5zm0 4.5c-5.52 0-10-2.02-10-4.5V11c0 2.48 4.48 4.5 10 4.5s10-2.02 10-4.5V8.5c0 2.48-4.48 4.5-10 4.5zm0 4.5c-5.52 0-10-2.02-10-4.5V15.5c0 2.48 4.48 4.5 10 4.5s10-2.02 10-4.5v-2.5c0 2.48-4.48 4.5-10 4.5z" />
+          <path d="M19.12 11.23c-.11-.12-.27-.22-.47-.24h-.17c-.28.06-.57.14-.87.17h-.31c-.41 0-.85-.06-1.27-.15h-.23c-.4-.14-.84-.39-1.22-.69l-.15-.14c-.11-.08-.24-.1-.31-.02-.08.08-.07.22.03.3l.15.14c.4.37.93.68 1.43.93h.23c.47.17.96.25 1.45.25h.31c.32 0 .71-.07 1-.13h.17c.16-.03.32-.08.42-.14.16-.14.16-.39-.01-.53z" />
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm6.65 14.5c-.21.05-.44.09-.67.12h-.18c-.46 0-.91-.12-1.32-.27h-.2c-.39-.2-.79-.47-1.13-.77l-.1-.1c-.1-.08-.23-.07-.3.02-.08.1-.06.23.03.3l.1.1c.42.36.91.7 1.4.92h.2c.49.19.98.31 1.49.31h.2c.24 0 .53-.04.75-.1a.25.25 0 00.17-.32.25.25 0 00-.31-.18z" />
         </svg>
       ),
     },
@@ -107,8 +109,8 @@ export default function Home() {
       name: "Three.js",
       desc: "پیاده‌سازی بک‌گراند زنده ۳ بعدی وکسل متحرک با اسکرول",
       svg: (
-        <svg viewBox="0 0 24 24" className="w-5 h-5 fill-white stroke-white" strokeWidth="1.5">
-          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+        <svg viewBox="0 0 24 24" className="w-5 h-5 fill-none stroke-white" strokeWidth="1.5">
+          <path d="M12 2L1.75 8v8L12 22l10.25-6V8L12 2zm8.5 6.27l-8.5 4.9-8.5-4.9V14.1l8.5 4.9 8.5-4.9V8.27z" />
         </svg>
       ),
     },
@@ -148,6 +150,9 @@ export default function Home() {
 
         {/* Feature Showcase — Vertical timeline with animated GIF demos */}
         <FeatureShowcase />
+
+        {/* Dedicated Mobile Mockup Section */}
+        <MobileShowcase />
 
         {/* Tech stacks — static grid showcase */}
         <section className="py-16 md:py-24 border-b border-[#d97756]/15 relative z-10 bg-[#141312]">
