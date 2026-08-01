@@ -7,7 +7,7 @@ import ScrollReveal from "./ScrollReveal";
 export default function MobileShowcase() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [shouldLoad, setShouldLoad] = useState(false);
-  const [iframeSrc, setIframeSrc] = useState("http://localhost:3000");
+  const [iframeSrc, setIframeSrc] = useState("https://app.stems.ir");
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -108,36 +108,38 @@ export default function MobileShowcase() {
           </div>
 
           {/* Premium CSS Phone Bezel Mockup */}
-          <div className="lg:col-span-5 order-1 lg:order-2 flex flex-col items-center justify-center">
+          <div className="lg:col-span-5 order-1 lg:order-2 flex flex-col items-center justify-center w-full h-[620px]">
             <ScrollReveal delay={300}>
-              <div className="relative mx-auto w-[280px] h-[560px] bg-black rounded-[42px] border-[10px] border-zinc-800 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.8),0_0_40px_rgba(168,85,247,0.1)] overflow-hidden">
-                
-                {/* iPhone Dynamic Island */}
-                <div className="absolute top-2.5 left-1/2 -translate-x-1/2 w-20 h-4 bg-black rounded-full z-30 flex items-center justify-end px-2.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-zinc-900 border border-zinc-800" />
+              <div className="scale-[0.78] origin-center">
+                <div className="relative mx-auto w-[360px] h-[720px] bg-black rounded-[48px] border-[12px] border-zinc-800 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.8),0_0_40px_rgba(168,85,247,0.1)] overflow-hidden">
+                  
+                  {/* iPhone Dynamic Island */}
+                  <div className="absolute top-3 left-1/2 -translate-x-1/2 w-24 h-5.5 bg-black rounded-full z-30 flex items-center justify-end px-3">
+                    <span className="w-2 h-2 rounded-full bg-zinc-900 border border-zinc-800" />
+                  </div>
+
+                  {/* Inner Screen */}
+                  <div className="relative w-full h-full bg-zinc-950 overflow-hidden">
+                    {shouldLoad ? (
+                      <iframe
+                        src={iframeSrc}
+                        title="Mediafy Mobile Demo"
+                        className="w-full h-full border-none bg-zinc-950"
+                        style={{ scrollbarWidth: "none" }}
+                      />
+                    ) : (
+                      <div className="absolute inset-0 bg-zinc-900 flex items-center justify-center">
+                        <div className="w-10 h-10 rounded-full border-2 border-purple-500/30 border-t-purple-500 animate-spin" />
+                      </div>
+                    )}
+
+                    {/* Refraction Reflection Overlay */}
+                    <div className="absolute inset-0 pointer-events-none bg-gradient-to-tr from-transparent via-white/[0.01] to-white/[0.04] z-20" />
+                  </div>
+
+                  {/* Phone Speaker line */}
+                  <div className="absolute top-1 left-1/2 -translate-x-1/2 w-12 h-1 bg-zinc-900 rounded-full z-30" />
                 </div>
-
-                {/* Inner Screen */}
-                <div className="relative w-full h-full bg-zinc-950 overflow-hidden">
-                  {shouldLoad ? (
-                    <iframe
-                      src={iframeSrc}
-                      title="Mediafy Mobile Demo"
-                      className="w-full h-full border-none bg-zinc-950"
-                      style={{ scrollbarWidth: "none" }}
-                    />
-                  ) : (
-                    <div className="absolute inset-0 bg-zinc-900 flex items-center justify-center">
-                      <div className="w-8 h-8 rounded-full border-2 border-purple-500/30 border-t-purple-500 animate-spin" />
-                    </div>
-                  )}
-
-                  {/* Refraction Reflection Overlay */}
-                  <div className="absolute inset-0 pointer-events-none bg-gradient-to-tr from-transparent via-white/[0.01] to-white/[0.04] z-20" />
-                </div>
-
-                {/* Phone Speaker line */}
-                <div className="absolute top-1 left-1/2 -translate-x-1/2 w-10 h-1 bg-zinc-900 rounded-full z-30" />
               </div>
             </ScrollReveal>
             <span className="text-[10px] text-zinc-500 font-body-ir mt-4 text-center">
